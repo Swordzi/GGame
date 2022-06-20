@@ -4,7 +4,7 @@ use std::cmp::Ordering;
 use std::io;
 
 fn main() {
-    let u8secret_number: u8 = gen::generator();
+    let u8secret_number: u8 = gen::generator(0);
     let mut guessed: bool = false;
     let mut bypass: String = String::new();
 
@@ -15,7 +15,6 @@ fn main() {
     if bypass.trim() == "y" {
         println!("The secret number is {}", u8secret_number);
     }
-    println!("Please input your guess.");
     while guessed == false {
         {
             println!("Please input your guess.");
